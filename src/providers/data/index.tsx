@@ -3,7 +3,7 @@ import { createClient } from "graphql-ws"; //This is for creating a WebSocket cl
 import { fetchWrapper } from "./fetch-wrapper";
 
 export const API_BASE_URL = "https://api.crm.refine.dev"
-export const API_URL = "https://api.crm.refine.dev/graphql"
+export const API_URL = `${API_BASE_URL}/graphql`
 //WebSocket endpoint for the CRM API.
 export const WS_URL = 'wss://api.crm.refine.dev/graphql'
 //GraphQL Client Setup:to handle requests, providing enhanced error handling and potentially other features like adding authentication headers.

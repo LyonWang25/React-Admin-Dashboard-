@@ -5,7 +5,7 @@ import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 import { useNotificationProvider } from "@refinedev/antd";
 import "@refinedev/antd/dist/reset.css";
 import {dataProvider, liveProvider, authProvider } from "./providers";
-
+import { Home, Login, Register, ForgotPassword } from "./pages";
 import routerBindings, {
   DocumentTitleHandler,
   UnsavedChangesNotifier,
@@ -37,6 +37,10 @@ function App() {
               >
                 <Routes>
                   <Route index element={<WelcomePage />} />
+                  <Route index element={<Home />} />
+                  <Route path="/register" element={<Register />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/forgot-password" element={<ForgotPassword />} />
                 </Routes>
                 <RefineKbar />
                 <UnsavedChangesNotifier />
